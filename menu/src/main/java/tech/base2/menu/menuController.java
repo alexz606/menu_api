@@ -22,14 +22,14 @@ public class menuController {
 	private MenuService menuService;
 	
 	//Return All Items
-	@GetMapping("/")
+	@GetMapping("/menu")
 	public String greeting(Model model) {
 		model.addAttribute("menu", menuService.getWeeklyMenu());
 		return "greeting";
 	}
 	
 	//Return an item
-	@GetMapping("/{day}")
+	@GetMapping("/menu/{day}")
 	public String getASingleItem(@PathVariable String day, Model model) {
 		model.addAttribute("menu", menuService.getDailyMenu(day));
 		return "greeting";
