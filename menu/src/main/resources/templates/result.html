@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	 <table>
+      <tr>
+        <th>DAY</th>
+        <th>PROTEIN</th>
+        <th>CARB</th>
+      </tr>
+      <tr th:each="menu : ${menu}">
+        <td th:text="${menu.day}"></td>
+        <td th:text="${menu.protein}"></td>
+        <td th:text="${menu.carb}"></td>
+      </tr>
+    </table>
+    <a href="/menu">Create another menu item</a>
+</body>
+</html>
